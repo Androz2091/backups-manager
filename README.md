@@ -18,5 +18,5 @@ Les autres fichiers sont supprimés automatiquement.
 CronJob pour exécuter automatiquement le script à une heure du matin:
 
 ```sh
-0 1 * * * /usr/bin/ruby backup_manager.rb
+0 1 * * * /usr/bin/ruby /path/to/backups_manager.rb
 ```
