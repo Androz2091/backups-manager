@@ -21,7 +21,7 @@ Dir.foreach(directory_path) do |filename|
     one_per_day_param = time.hour === 0 && (time.to_i > (Time.now.to_i - 604800))
 
     # backups created during the last month and a sunday should be kept
-    one_per_week_param = time.sunday? && (time.to_i > (Time.now.to_i - 2678400))
+    one_per_week_param = time.hour === 0 && time.sunday? && (time.to_i > (Time.now.to_i - 2678400))
 
     # backups created during the last year and the first of the month should ke kept
     one_per_month_param = time.day === 1 && (time.to_i > (Time.now.to_i - 31622400))
