@@ -20,3 +20,30 @@ CronJob pour exécuter automatiquement le script à une heure du matin:
 ```sh
 0 1 * * * /usr/bin/ruby /path/to/backups_manager.rb
 ```
+------------
+
+### Translated to English
+
+# Backup Manager
+
+⚡ Manage your backup files intelligently.
+
+## Features
+
+Scans your backup files folder (in the format `backupname-2020-08-01-1200.sql` for example) and applies the following rules:
+
+* All files from the last 24 hours are kept.
+* One file per day is kept for a week (the one created at midnight).
+* One file per week is kept for one month (the one created on Sunday).
+* One file per month is kept for one year (the one created on the first of the month).
+
+The other files are deleted automatically.
+
+## [CronJob](https://www.google.com/search?q=cronjob+means)
+
+CronJob to automatically run the script at one in the morning:
+
+```sh
+0 1 * * * /usr/bin/ruby /path/to/backups_manager.rb
+```
+
