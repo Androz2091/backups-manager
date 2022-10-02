@@ -12,8 +12,6 @@ Dir.foreach(directory_path) do |dirname|
         # ignore system files
         next if filename == '.' or filename == '..'
 
-        print filename
-
         # retrieve date from file name
         year, month, day, hours_and_minutes = filename.split('-').last(4)
         hours_and_minutes = hours_and_minutes.split('.')[0]
